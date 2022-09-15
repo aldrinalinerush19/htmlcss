@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="https://www.google.com" target="_blank" method="get">
+        <fieldset class="invoice-details-color">
+          <legend class="invoice-details">Invoice Details</legend>
+          <label class="invoice-to">Invoice To:</label>
+          <input
+            type="text"
+            name="full_name"
+            placeholder="Full name"
+            required
+          />
+          <label class="date">Date:</label>
+          <input type="date" name="date" required />
+          <div>
+            <label class="contact">Contact #:</label>
+            <input type="tel" maxlength="11" name="contact" required />
+          </div>
+        </fieldset>
+        <table>
+          <thead>
+            <tr>
+              <th class="invoice" colspan="4">Invoice</th>
+            </tr>
+          </thead>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Quantity</th>
+              <th>Unit Price</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="right" valign="top">
+                <textarea name="item_1" id="item-1" maxlength="100"></textarea>
+              </td>
+              <td><input type="number" name="quantity_1" /></td>
+              <td>
+                <input type="number" name="unit_price_1" />
+              </td>
+              <td><input type="text" name="amount_1" /></td>
+            </tr>
+            <tr>
+              <td>
+                <textarea name="item_2" id="item-2" maxlength="100"></textarea>
+              </td>
+              <td><input type="number" name="quantity_2" /></td>
+              <td><input type="number" name="unit_price_2" /></td>
+              <td><input type="text" name="amount_2" /></td>
+            </tr>
+            <tr>
+              <td>
+                <textarea name="item_3" id="item-3" maxlength="100"></textarea>
+              </td>
+              <td><input type="number" name="quantity_3" /></td>
+              <td><input type="number" name="unit_price_3" /></td>
+              <td><input type="text" name="amount_3" /></td>
+            </tr>
+            <tr>
+              <td>
+                <textarea name="item_4" id="item-4" maxlength="100"></textarea>
+              </td>
+              <td><input type="number" name="quantity_4" /></td>
+              <td><input type="number" name="unit_price_4" /></td>
+              <td><input type="text" name="amount_4" /></td>
+            </tr>
+            <tr>
+              <td class="subtotal" colspan="3">Subtotal</td>
+              <td class="empty-subtotal"></td>
+            </tr>
+            <tr>
+              <td class="vat" colspan="3">Vat (2%)</td>
+              <td class="empty-vat"></td>
+            </tr>
+            <tr>
+              <td class="total" colspan="3">Total</td>
+              <td class="empty-total"></td>
+            </tr>
+          </tbody>
+        </table>
+        <fieldset class="additional-details-1">
+          <legend class="additional-details-2">Additional Details</legend>
+          <label class="payment-method" for="">Payment Method:</label>
+          <select name="payment_method" required>
+            <option value="">-- Select Payment Method --</option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="paypal">Paypal</option>
+            <option value="gcash">Gcash</option>
+            <option value="cryptocurrency">Cryptocurrency</option>
+          </select>
+          <br />
+          <br />
+          <div>
+            <label class="select-address" for="">Select Address:</label>
+            <input
+              type="radio"
+              id="home"
+              name="sel_address"
+              value="Home"
+              required
+            />
+            <label for="home">Home</label>
+            <input type="radio" id="office" name="sel_address" value="Office" />
+            <label for="office">Office</label>
+          </div>
+          <div>
+            <textarea
+              class="delivery-address"
+              name="delivery_add"
+              id=""
+              cols="50"
+              rows="2"
+              maxlength="500"
+              placeholder="Delivery Address"
+              required
+            ></textarea>
+          </div>
+        </fieldset>
+        <div class="submit">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

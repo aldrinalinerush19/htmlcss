@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+.all-logos {
+  display: flex;
+  text-align: center;
+}
+
+img {
+  width: 100px;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 33.33%;
+}
+
+.search-engines-green {
+  color: #40c89b;
+}
+
+.square-bullets li {
+  list-style-type: square;
+}
+
+.video {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.www-blue {
+  color: #64b7e9;
+  font-weight: bold;
+}
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  margin: 0 auto;
+  height: 500px;
+  width: 600px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 600px;
+}

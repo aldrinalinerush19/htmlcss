@@ -1,0 +1,42 @@
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+th {
+  font-weight: bold;
+  background-color: #005a9c;
+  padding: 10px;
+  color: white;
+}
+
+table {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td {
+  padding: 10px;
+}
+
+.subtotal {
+  text-align: right;
+  font-weight: bold;
+}
+
+.vat {
+  text-align: right;
+  font-weight: bold;
+}
+
+.total {
+  text-align: right;
+  font-weight: bold;
+}
+
+#invoice {
+  background-color: #003366;
+  color: white;
+}
