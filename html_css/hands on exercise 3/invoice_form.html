@@ -17,13 +17,14 @@
             type="text"
             name="full_name"
             placeholder="Full name"
+            maxlength="50"
             required
           />
           <label class="date">Date:</label>
           <input type="date" name="date" required />
           <div>
             <label class="contact">Contact #:</label>
-            <input type="tel" maxlength="11" name="contact" required />
+            <input type="tel" maxlength="14" name="contact" required />
           </div>
         </fieldset>
         <table>
@@ -122,7 +123,7 @@
               id=""
               cols="50"
               rows="2"
-              maxlength="500"
+              maxlength="300"
               placeholder="Delivery Address"
               required
             ></textarea>
