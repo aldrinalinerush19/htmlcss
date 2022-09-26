@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="js/bootstrap.min.js" />
+  </head>
+  <body>
+    <section class="outside-container">
+    <div class="container">
+      <h4 class="text-center text-primary">Invoice Details</h4>
+      <form class="border border-primary p-5 m-3" bg-white action="https://www.google.com" target="_blank" method="get">
+      
+        <div class="row">
+          <div class="my-3 col-3">
+            <label class="form-label fw-bold">Invoice to:</label>
+            <input class="form-control" type="text" name="first_name" placeholder="Full Name" required/>
+          </div>
+          <div class="my-3 col-2">
+            <label class="form-label fw-bold"">Date:</label>
+            <input class="form-control" type="date" name="date" required/>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-3">
+            <label class="form-label fw-bold">Contact #:</label>
+            <input class="form-control" type="text" name="contact_num" placeholder="Contact Number" maxlength="14" required/>
+          </div>
+        </div>
+      
+
+      <table class="table table-bordered text-center table-hover border-primary">
+        <div class="row">
+          <div class="col">
+            <thead class="text-white bg-primary">
+              <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col">
+              <tbody>
+                <tr>
+                  <td>
+                    <textarea class="form-control" name="item_1" id="item-1" cols="10" rows="1"></textarea>
+                  </td>
+                  <td>
+                    <input class="form-control" type="number" name="quantity_1">
+                  </td>
+                  <td>
+                    <input class="form-control" type="number" name="unit_price_1">
+                  </td>
+                  <td>
+                    <input class="form-control" type="text" name="amount_1">
+                  </td>
+                </tr>
+              </div>
+            </div>
+            
+                <div class="row">
+                  <div class="col">
+                    <tr>
+                      <td>
+                        <textarea class="form-control" name="item_2" id="item-2" cols="10" rows="1"></textarea>
+                      </td>
+                      <td>
+                        <input class="form-control" type="number" name="quantity_2">
+                      </td>
+                      <td>
+                        <input class="form-control" type="number" name="unit_price_2">
+                      </td>
+                      <td>
+                        <input class="form-control" type="text" name="amount_2">
+                      </td>
+                    </tr>
+                  </div>
+                </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <tr>
+                          <td>
+                            <textarea class="form-control" name="item_3" id="item-3" cols="10" rows="1"></textarea>
+                          </td>
+                          <td>
+                            <input class="form-control" type="number" name="quantity_3">
+                          </td>
+                          <td>
+                            <input class="form-control" type="number" name="unit_price_3">
+                          </td>
+                          <td>
+                            <input class="form-control" type="text" name="amount_3">
+                          </td>
+                        </tr>
+                      </div>
+                    </div>
+                  
+                    <div class="row">
+                      <div class="col">
+                        <tr>
+                          <td>
+                            <textarea class="form-control" name="item_4" id="item-4" cols="10" rows="1"></textarea>
+                          </td>
+                          <td>
+                            <input class="form-control" type="number" name="quantity_4">
+                          </td>
+                          <td>
+                            <input class="form-control" type="number" name="unit_price_4">
+                          </td>
+                          <td>
+                            <input class="form-control" type="text" name="amount_4">
+                          </td>
+                        </tr>
+                      </div>
+                    </div>
+                  </tbody>
+                </table>
+            <div class="row">
+              <div class="col-9 text-end my-2">
+                <h5>Subtotal</h5>
+              </div>
+              <div class="col-3 text-end">
+                <input class="form-control" type="number">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-9 text-end my-2">
+                <h5>Vat (2%)</h5>
+              </div>
+              <div class="col-3 text-end">
+                <input class="form-control" type="number">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-9 text-end my-2">
+                <h5>Total</h5>
+              </div>
+              <div class="col-3 text-end">
+                <input class="form-control" type="number">
+              </div>
+            </div>
+        
+            <div class="row">
+              <div class="col-3 pb-3">
+                <label class="form-label fw-bold">Payment Method:</label>
+                <select class="form-select" name="" id="">
+                  <option value="">-- Select Payment Method --</option>
+                  <option value="visa">Visa</option>
+                  <option value="mastercard">Mastercard</option>
+                  <option value="paypal">Paypal</option>
+                  <option value="gcash">Gcash</option>
+                  <option value="cryptocurrency">Cryptocurrency</option>
+                </select>
+              </div>
+
+            </div>
+            
+            <div class="row">
+              <div class="col my-3">
+                <label class="select-address fw-bold pe-3" for="">Select Address:</label>
+            <input
+              class="form-check-input"
+              type="radio"
+              id="home"
+              name="sel_address"
+              value="Home"
+              required
+            />
+            <label class="form-label me-3" for="home">Home</label>
+            <input class="form-check-input" type="radio" id="office" name="sel_address" value="Office" />
+            <label class="form-label me-3" for="office">Office</label>
+              </div>
+        </div> 
+        <div class="row">
+          <div class="col-4 my-3">
+            <textarea class="form-control" name="item_1" id="item-1" cols="10" rows="1" placeholder="Delivery Address"></textarea>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col my-3 text-center">
+            <button class="btn btn-primary">Submit</button>
+          </div>
+
+        </div>
+
+
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
