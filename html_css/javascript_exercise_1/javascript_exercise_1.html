@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="evenoddinput" />
+    <button onclick="check()">Check</button>
+    <div id="result"></div>
+
+    <br />
+
+    <input type="text" id="singleChar" value="" maxlength="1" />
+    <button onclick="checkLetter()">Check Letter</button>
+    <div id="letterResult"></div>
+
+    <script>
+      function check() {
+        let number = parseInt(document.getElementById('evenoddinput').value);
+
+        if (number % 2 === 0) {
+          document.getElementById('result').innerHTML = 'even';
+        } else {
+          document.getElementById('result').innerHTML = 'odd';
+        }
+      }
+
+      function checkLetter() {
+        let letter = document.getElementById('singleChar').value;
+
+        if (
+          letter === 'a' ||
+          letter === 'e' ||
+          letter === 'i' ||
+          letter === 'o' ||
+          letter === 'u' ||
+          letter === 'A' ||
+          letter === 'E' ||
+          letter === 'I' ||
+          letter === 'O' ||
+          letter === 'U'
+        ) {
+          document.getElementById('letterResult').innerHTML = 'vowel';
+        } else {
+          document.getElementById('letterResult').innerHTML = 'consonant';
+        }
+      }
+    </script>
+  </body>
+</html>
