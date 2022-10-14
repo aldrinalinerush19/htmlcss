@@ -25,6 +25,13 @@
 
     <button type="button" onclick="division();">/</button>
 
+    <input type="date" onchange="getWeekDayName(event)" />
+    <div id="result6"></div>
+
+    <br /><br />
+    <input type="date" onchange="getMonthName(event)" />
+    <div id="resultMonth"></div>
+
     <script>
       function checkLetter() {
         let letter = document.getElementById('singleChar').value;
@@ -79,6 +86,86 @@
         let num2 = document.getElementById('num2').value;
         let finalNum = num1 / num2;
         document.getElementById('finalRes').innerHTML = finalNum;
+      }
+
+      function getWeekDayName(e) {
+        let date = new Date(e.currentTarget.value);
+        let day = date.getDay();
+
+        switch (day) {
+          case 0:
+            document.getElementById('result6').innerHTML = 'Sunday';
+            break;
+          case 1:
+            document.getElementById('result6').innerHTML = 'Monday';
+            break;
+          case 2:
+            document.getElementById('result6').innerHTML = 'Tuesday';
+            break;
+          case 3:
+            document.getElementById('result6').innerHTML = 'Wednesday';
+            break;
+          case 4:
+            document.getElementById('result6').innerHTML = 'Thursday';
+            break;
+          case 5:
+            document.getElementById('result6').innerHTML = 'Friday';
+            break;
+          case 6:
+            document.getElementById('result6').innerHTML = 'Saturday';
+            break;
+          default:
+            document.getElementById('result6').innerHTML = 'Unknown date value';
+            break;
+        }
+      }
+
+      function getMonthName(e) {
+        let date = new Date(e.currentTarget.value);
+        let day = date.getMonth();
+
+        switch (day) {
+          case 0:
+            document.getElementById('resultMonth').innerHTML = 'January';
+            break;
+          case 1:
+            document.getElementById('resultMonth').innerHTML = 'February';
+            break;
+          case 2:
+            document.getElementById('resultMonth').innerHTML = 'March';
+            break;
+          case 3:
+            document.getElementById('resultMonth').innerHTML = 'April';
+            break;
+          case 4:
+            document.getElementById('resultMonth').innerHTML = 'May';
+            break;
+          case 5:
+            document.getElementById('resultMonth').innerHTML = 'June';
+            break;
+          case 6:
+            document.getElementById('resultMonth').innerHTML = 'July';
+            break;
+          case 7:
+            document.getElementById('resultMonth').innerHTML = 'August';
+            break;
+          case 8:
+            document.getElementById('resultMonth').innerHTML = 'September';
+            break;
+          case 9:
+            document.getElementById('resultMonth').innerHTML = 'October';
+            break;
+          case 10:
+            document.getElementById('resultMonth').innerHTML = 'November';
+            break;
+          case 11:
+            document.getElementById('resultMonth').innerHTML = 'December';
+            break;
+          default:
+            document.getElementById('resultMonth').innerHTML =
+              'Unknown date value';
+            break;
+        }
       }
     </script>
   </body>
