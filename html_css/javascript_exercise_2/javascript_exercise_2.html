@@ -11,18 +11,19 @@
     <button onclick="checkLetter()">Check Letter</button>
     <div id="letterResult"></div>
     <br /><br />
-    <input type="number" id="num1" value="" />
-    <input type="number" id="num2" value="" />
-    <br /><br />
 
-    <div>
-      <button id="plus" value="plus" onclick="calc('add')">+</button>
-      <button id="minus" value="minus" onclick="calc('sub')">-</button>
-      <button id="times" value="times" onclick="calc('mul')">*</button>
-      <button id="divide" value="divide" onclick="calc('div')">/</button>
-      <button id="equals" value="equals" onclick="calc('eq')">=</button>
-    </div>
-    <div id="result"></div>
+    <input type="number" id="num1" name="num1" />
+    <input type="number" id="num2" name="num2" />
+    <div>Final Result: <span id="finalRes"></span></div>
+    <br />
+
+    <button type="button" onclick="addition();">+</button>
+
+    <button type="button" onclick="subtraction();">-</button>
+
+    <button type="button" onclick="multiply();">*</button>
+
+    <button type="button" onclick="division();">/</button>
 
     <script>
       function checkLetter() {
@@ -50,7 +51,35 @@
         }
       }
 
-      //  machine problem 2 still figuring out
+      //  not a switch case
+
+      function addition() {
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        let finalNum = parseInt(num1) + parseInt(num2);
+        document.getElementById('finalRes').innerHTML = finalNum;
+      }
+
+      function subtraction() {
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        let finalNum = parseInt(num1) - parseInt(num2);
+        document.getElementById('finalRes').innerHTML = finalNum;
+      }
+
+      function multiply() {
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        let finalNum = num1 * num2;
+        document.getElementById('finalRes').innerHTML = finalNum;
+      }
+
+      function division() {
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        let finalNum = num1 / num2;
+        document.getElementById('finalRes').innerHTML = finalNum;
+      }
     </script>
   </body>
 </html>
