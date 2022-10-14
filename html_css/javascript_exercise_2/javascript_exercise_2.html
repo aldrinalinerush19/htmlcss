@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="singleChar" value="" maxlength="1" />
+    <button onclick="checkLetter()">Check Letter</button>
+    <div id="letterResult"></div>
+    <br /><br />
+    <input type="number" id="num1" value="" />
+    <input type="number" id="num2" value="" />
+    <br /><br />
+
+    <div>
+      <button id="plus" value="plus" onclick="calc('add')">+</button>
+      <button id="minus" value="minus" onclick="calc('sub')">-</button>
+      <button id="times" value="times" onclick="calc('mul')">*</button>
+      <button id="divide" value="divide" onclick="calc('div')">/</button>
+      <button id="equals" value="equals" onclick="calc('eq')">=</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+      function checkLetter() {
+        let letter = document.getElementById('singleChar').value;
+        document.getElementById('letterResult').innerHTML =
+          checkTheLetter(letter);
+      }
+
+      // switch case
+      function checkTheLetter(letter) {
+        switch (letter) {
+          case 'a':
+          case 'e':
+          case 'i':
+          case 'o':
+          case 'u':
+          case 'A':
+          case 'E':
+          case 'I':
+          case 'O':
+          case 'U':
+            return 'vowel';
+          default:
+            return 'consonant';
+        }
+      }
+
+      //  machine problem 2 still figuring out
+    </script>
+  </body>
+</html>
